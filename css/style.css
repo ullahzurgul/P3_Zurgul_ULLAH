@@ -483,114 +483,6 @@ footer img {
   opacity: 0;
 }
 
-.menu .menu_bloc .card_elements:nth-child(1) {
-  opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  visibility: visible;
-  -webkit-animation-name: cardDisplay;
-          animation-name: cardDisplay;
-  -webkit-animation-duration: 0.75s;
-          animation-duration: 0.75s;
-}
-
-@-webkit-keyframes cardDisplay {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-    margin-top: 10px;
-  }
-  75% {
-    visibility: visible;
-    opacity: 0.5;
-    margin-top: 5px;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-    margin-top: 0;
-  }
-}
-
-@keyframes cardDisplay {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-    margin-top: 10px;
-  }
-  75% {
-    visibility: visible;
-    opacity: 0.5;
-    margin-top: 5px;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-    margin-top: 0;
-  }
-}
-
-.menu .menu_bloc .card_elements:nth-child(2) {
-  opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  visibility: visible;
-  -webkit-animation-name: cardDisplay;
-          animation-name: cardDisplay;
-  -webkit-animation-duration: 0.85s;
-          animation-duration: 0.85s;
-}
-
-@keyframes cardDisplay {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-    margin-top: 10px;
-  }
-  75% {
-    visibility: visible;
-    opacity: 0.5;
-    margin-top: 5px;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-    margin-top: 0;
-  }
-}
-
-.menu .menu_bloc .card_elements:nth-child(3) {
-  opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  visibility: visible;
-  -webkit-animation-name: cardDisplay;
-          animation-name: cardDisplay;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-@keyframes cardDisplay {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-    margin-top: 10px;
-  }
-  75% {
-    visibility: visible;
-    opacity: 0.5;
-    margin-top: 5px;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-    margin-top: 0;
-  }
-}
-
 .menu .menu_name {
   margin: 15px;
 }
@@ -603,147 +495,73 @@ footer img {
   position: absolute;
 }
 
-.menu .menu_card {
-  background-color: #fff;
-  margin: 15px 10px;
-  height: 82px;
-  width: 100%;
-  border-radius: 15px 15px 15px 15px;
-  box-shadow: 0px 0px 17px -7px #828282;
-  -webkit-box-shadow: 0px 0px 17px -7px #828282;
-  -moz-box-shadow: 0px 0px 17px -7px #828282;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.card_elements {
+  background-color: white;
+  border-radius: 15px;
+  margin: 15px;
   overflow: hidden;
 }
 
-.menu .menu_card:hover > .checkmark {
+.menu_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.left_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.left_card:hover > .checkmark {
   margin-right: 0px;
 }
 
-.menu .menu_card:hover > .checkmark i {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.menu .menu_card .left_card {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.menu .menu_card .left_card > div {
+.left_card .c1 {
   margin: 0;
+  min-width: 60%;
   width: 100%;
+  font-size: 13.5px;
+  padding: 10px 8px;
 }
 
-.menu .menu_card .left_card > div p:nth-child(1) {
-  font-size: 16px;
-  padding: 0 5px;
+.left_card .c1 p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menu .menu_card .checkmark {
-  width: 100px;
+.price_menu {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.checkmark {
   background-color: #99E2D0;
-  margin-right: -100px;
+  width: 100px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 26px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: -101px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding-bottom: 5px;
 }
 
-.menu .menu_card .checkmark i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 27px;
-  width: 27px;
-  margin-top: 25px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #fff;
-  border-radius: 50px;
+.checkmark i {
   color: #99E2D0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.menu .menu_card p {
-  margin: 0 8px;
-}
-
-.menu .menu_card p:nth-child(1) {
-  font-size: 17px;
+  background-color: white;
+  border-radius: 30px;
   padding: 5px;
-}
-
-.menu .menu_card p:nth-child(3) {
-  font-weight: bold;
-}
-
-.menu .menu_card p:nth-child(3) a {
-  padding: 15px 10px;
-}
-
-.menu .price_menu {
-  font-weight: bold;
-  padding: 0 15px;
-}
-
-.menu button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-  min-width: 77%;
-}
-
-.c1 p:nth-child(2) {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 14px;
-  margin-left: 11px;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
