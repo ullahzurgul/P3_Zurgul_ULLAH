@@ -22,7 +22,7 @@ body {
 // LOADER
 
 .loaderbg{
-    background-color: $omfgreen;
+    background-color: white;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -44,7 +44,7 @@ body {
     animation: load7 1.8s infinite ease-in-out;
     }
     .loader {
-    color: #ffffff;
+    color: $omfpurple;
     font-size: 15px;
     margin: 320px auto;
     position: relative;
@@ -167,6 +167,7 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 60px;
+    display: flex;
     background: linear-gradient(173deg, rgba(203,119,223,1) 31%, rgba(160,90,220,1) 79%);
     color: white;
     transition: 0.5s;
@@ -389,8 +390,8 @@ body {
 
 footer{
     background-color: #353535;
-    padding-left: 5%;
-    padding-bottom: 5%;
+    padding-left: 5px;
+    padding-bottom: 25px;
 
     p{
         a{
@@ -413,7 +414,7 @@ footer{
 }
 
 
-// menus
+// Menus
 
 .menu_img{
 
@@ -447,12 +448,13 @@ footer{
     border-radius: 18px 18px 0 0;
     background-color: $omflightgrey;
     position: relative;
-    top: -25px;
+    margin-top: -25px;
+    padding-bottom: 30px;
+
 
     .title{
         display: flex;
         align-items: center;
-        margin-left: -25px;
 
         .resto_like{
             font-size: 25px;
@@ -512,6 +514,35 @@ footer{
     border-radius: 15px;
     margin: 15px;
     overflow: hidden;
+    box-shadow: 0px 0px 17px -7px rgba(130,130,130,1);
+    -webkit-box-shadow: 0px 0px 17px -7px rgba(130,130,130,1);
+    -moz-box-shadow: 0px 0px 17px -7px rgba(130,130,130,1);
+    animation: cardOpacity 1.5s;
+
+    @keyframes cardOpacity{
+
+        0%{
+            opacity: 0;
+            margin-top: 30px;
+            
+
+        }
+
+        50%{
+            opacity: 0.5;
+            margin-top: 15px;
+
+        }
+
+        100%{
+            opacity: 1;
+            margin-top: 0;
+
+
+        }
+
+        
+    }
 }
 
 .menu_card {
@@ -526,9 +557,15 @@ footer{
     display: flex;
     width: 100%;
     align-items: flex-end;
+    animation-name: iconRotate;
 
     &:hover > .checkmark{
         margin-right: 0px;
+
+        i{
+            transform: rotate(360deg);
+            transition: 0.75s;
+        }
 }
 
     .c1 {
@@ -581,3 +618,103 @@ footer{
     }
 }
 
+
+
+
+// Mediaqueries
+
+// desktop
+@media (min-width:961px){
+
+    // accueil
+    
+    .resto_blocs{
+        display: flex !important;
+        flex-direction: row !important;
+
+        .resto_bloc{
+            width: 23%;
+
+            img{
+                width: 22.8vw!important;
+            }
+        }
+    }
+    
+    .accueil_top{
+        display: flex;
+
+        
+    }
+
+    .explorer{
+        width: 50%;
+        padding: 50px 0;
+        margin: 10px;
+        border-radius: 25px;
+    }
+
+    .fonctionnement{
+        width: 50%;
+
+        h1{
+            margin-left: 20px;
+        }
+
+        .fonc_etapes{
+
+            .fonc_num{
+                margin-left: -34px;
+            }
+        }
+        
+    }
+
+    .bloc_img{
+
+        p{
+            position: relative !important;
+            z-index: 999;
+            width: 50px;
+            bottom: -4px;
+            padding: 0;
+            color: #557a55;
+            left: 0 !important;
+            margin-bottom: -50px;
+            margin-top: 0;
+            border-radius: 5px;
+            background-color: #99E2D0;
+            font-size: 13px;
+        }
+
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+
+    // Menus
+
+    .menu{
+        width: 60%;
+    }
+
+    .menu_items{
+        width: 75%;
+    }
+
+    .left_card p{
+        font-size: 16px !important;
+    }
+    
+
+    .button_omf{
+        margin-top: 30px;
+
+    }
+
+}
